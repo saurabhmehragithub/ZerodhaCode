@@ -44,8 +44,9 @@ public class ZerodhaRestController {
 
     @GetMapping("/holdings")
     public List<Holding> getHoldings() throws Exception, KiteException {
-        System.out.println("FIRST  ZerodhaRestController | Print from the DB : " ); getHoldingsFromDb();
-        System.out.println("SECOND ZerodhaRestController | Print from cache function and see : " + printHoldingsCache());
+        System.out.println("FIRST ZerodhaRestController | Inside getHoldings() ");
+        System.out.println("FIRST  ZerodhaRestController | Print from the DB : " + getHoldingsFromDb());
+        //System.out.println("SECOND ZerodhaRestController | Print from cache function and see : " + printHoldingsCache());
         return zerodhaService.getHoldings();
     }
 

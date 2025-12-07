@@ -64,7 +64,7 @@ public class ZerodhaService {
     }
 
     public List<Holding> getHoldings() throws Exception, KiteException { 
-        ensureAuthenticated();
+         //ensureAuthenticated();
         // Save Holdings to DB and returning 
         saveHoldingsToDb();
         return kiteConnect.getHoldings();
@@ -91,10 +91,14 @@ public class ZerodhaService {
         }
     }
 
-    @Cacheable("holdings")
+    //@Cacheable("holdings")
     public List<HoldingEntity> getHoldingsFromDb() {
-    System.out.println("If this is called then Caching didn't work as expected PERHAPS not sure");
-    return holdingRepository.findAll();
+    //System.out.println("If this is called then Caching didn't work as expected PERHAPS not sure");
+    //return holdingRepository.findAll();
+
+    List<HoldingEntity> holdings = holdingRepository.findAll();
+    System.out.println(holdings); // This will print the list
+    return holdings;
 }
 
 }
