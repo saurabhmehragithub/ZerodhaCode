@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zerodha Holdings & Positions</title>
+    <style>
+        table { border-collapse: collapse; width: 90%; margin-bottom: 30px; }
+        th, td { border: 1px solid #aaa; padding: 8px 12px; }
+        th { background: #f0f0f0; }
+        #logo {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            height: 120px; /* Adjust as needed */
+        }
+        #loginBtn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #loginBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo.jpg" alt="Logo" id="logo" />
+    <div id="appButton">
+        <button id="loginBtn">Start Zerodha Authentication </button>        
+    </div>
+    <div id="app"></div>
+    <div id="appHoldingsPositions"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
